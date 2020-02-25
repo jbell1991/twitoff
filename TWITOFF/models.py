@@ -7,7 +7,7 @@ class User(DB.Model):
     id = DB.Column(DB.BigInteger, primary_key=True)
     name = DB.Column(DB.String(15), nullable=False)
 
-class Tweet
+class Tweet(DB.Model):
     """Tweets we pull"""
     id = DB.Column(DB.BigInteger, primary_key=True)
     text = DB.Column(DB.Unicode(280))
