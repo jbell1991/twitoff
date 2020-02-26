@@ -16,8 +16,6 @@ gunicorn = "*"
 scikit-learn = "*"
 python-dotenv = "*"
 python-decouple = "*"
-psycopg2-binary = "*"
-decouple = "*"
 
 [requires]
 python_version = "3.8"

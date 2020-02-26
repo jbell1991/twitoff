@@ -1,6 +1,6 @@
 """Code for our app"""
 
-#from decouple import config
+from decouple import config
 from flask import Flask, render_template, request
 from .models import DB, User
 
@@ -22,4 +22,12 @@ def create_app():
     def root():
         users = User.query.all()
         return render_template('base.html', title='Home', user=users)
+
+    @app.route('/reset')
+    def reset():
+        DB.drop_all()
+        DB.create_all()
+        return render_template('base.html', title = 'Reset', users=[])
+
     return app
+    
